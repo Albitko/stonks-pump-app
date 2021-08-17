@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		FA0E8CCA26CC2EA20034BB09 /* StonksPumpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CC926CC2EA20034BB09 /* StonksPumpApp.swift */; };
 		FA0E8CCC26CC2EA20034BB09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CCB26CC2EA20034BB09 /* ContentView.swift */; };
-		FA0E8CCE26CC2EA40034BB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0E8CCD26CC2EA40034BB09 /* Assets.xcassets */; };
 		FA0E8CD126CC2EA40034BB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0E8CD026CC2EA40034BB09 /* Preview Assets.xcassets */; };
+		FA0E8CD926CC305B0034BB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0E8CD826CC305B0034BB09 /* Assets.xcassets */; };
+		FA0E8CDC26CC36150034BB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CDB26CC36150034BB09 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA0E8CC626CC2EA20034BB09 /* StonksPump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StonksPump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0E8CC926CC2EA20034BB09 /* StonksPumpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonksPumpApp.swift; sourceTree = "<group>"; };
 		FA0E8CCB26CC2EA20034BB09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FA0E8CCD26CC2EA40034BB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0E8CD026CC2EA40034BB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA0E8CD226CC2EA40034BB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0E8CD826CC305B0034BB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		FA0E8CDB26CC36150034BB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,8 @@
 			children = (
 				FA0E8CC926CC2EA20034BB09 /* StonksPumpApp.swift */,
 				FA0E8CCB26CC2EA20034BB09 /* ContentView.swift */,
-				FA0E8CCD26CC2EA40034BB09 /* Assets.xcassets */,
+				FA0E8CDA26CC35EE0034BB09 /* Extensions */,
+				FA0E8CD826CC305B0034BB09 /* Assets.xcassets */,
 				FA0E8CD226CC2EA40034BB09 /* Info.plist */,
 				FA0E8CCF26CC2EA40034BB09 /* Preview Content */,
 			);
@@ -67,6 +70,14 @@
 				FA0E8CD026CC2EA40034BB09 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA0E8CDA26CC35EE0034BB09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E8CDB26CC36150034BB09 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0E8CD126CC2EA40034BB09 /* Preview Assets.xcassets in Resources */,
-				FA0E8CCE26CC2EA40034BB09 /* Assets.xcassets in Resources */,
+				FA0E8CD926CC305B0034BB09 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +151,7 @@
 			files = (
 				FA0E8CCC26CC2EA20034BB09 /* ContentView.swift in Sources */,
 				FA0E8CCA26CC2EA20034BB09 /* StonksPumpApp.swift in Sources */,
+				FA0E8CDC26CC36150034BB09 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

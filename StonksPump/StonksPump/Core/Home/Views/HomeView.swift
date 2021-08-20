@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio = false
     
     var body: some View {
@@ -17,8 +19,20 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             // Content layer
-            VStack{
+            VStack(spacing: 0.0){
                 homeHeader
+                
+                columnTitles
+                
+                if !showPortfolio {
+                    allCoinsList
+                        .transition(.move(edge: .leading))
+                }
+                
+                if showPortfolio {
+                    portfolioCoinsList
+                        .transition(.move(edge: .trailing))
+                }
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
             } 
         }
@@ -48,6 +62,41 @@ extension HomeView {
         }
         .padding(.horizontal)
     }
+    
+    private var allCoinsList: some View {
+        List(){
+            ForEach(vm.allCoins){ coin in
+                CoinRowView(coin: coin, showHoldingColumn: false)
+                    .listRowInsets(.init(top:10, leading: 0, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioCoinsList: some View {
+        List(){
+            ForEach(vm.portfolioCoins){ coin in
+                CoinRowView(coin: coin, showHoldingColumn: true)
+                    .listRowInsets(.init(top:10, leading: 0, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var columnTitles: some View {
+        HStack{
+            Text("Coin")
+            Spacer()
+            if showPortfolio {
+                Text("Holdings")
+            }
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+        }
+        .font(.caption)
+        .foregroundColor(Color.theme.secondaryText)
+        .padding(.horizontal)
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -56,5 +105,6 @@ struct HomeView_Previews: PreviewProvider {
             HomeView()
                 .navigationBarHidden(true)
         }
+        .environmentObject(dev.homeVM)
     }
 }

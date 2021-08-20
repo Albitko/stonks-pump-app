@@ -19,6 +19,7 @@
 		FA0E8CEF26CECF120034BB09 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CEE26CECF120034BB09 /* CoinRowView.swift */; };
 		FA0E8CF126CECF770034BB09 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF026CECF770034BB09 /* PreviewProvider.swift */; };
 		FA0E8CF326CED7110034BB09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF226CED7110034BB09 /* Double.swift */; };
+		FA0E8CF526D02DC70034BB09 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF426D02DC70034BB09 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FA0E8CEE26CECF120034BB09 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		FA0E8CF026CECF770034BB09 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		FA0E8CF226CED7110034BB09 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		FA0E8CF426D02DC70034BB09 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		FA0E8CE026CC3B380034BB09 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E8CF426D02DC70034BB09 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0E8CEF26CECF120034BB09 /* CoinRowView.swift in Sources */,
+				FA0E8CF526D02DC70034BB09 /* HomeViewModel.swift in Sources */,
 				FA0E8CCC26CC2EA20034BB09 /* ContentView.swift in Sources */,
 				FA0E8CE426CC3B840034BB09 /* HomeView.swift in Sources */,
 				FA0E8CCA26CC2EA20034BB09 /* StonksPumpApp.swift in Sources */,

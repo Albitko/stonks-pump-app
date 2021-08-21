@@ -20,6 +20,8 @@
 		FA0E8CF126CECF770034BB09 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF026CECF770034BB09 /* PreviewProvider.swift */; };
 		FA0E8CF326CED7110034BB09 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF226CED7110034BB09 /* Double.swift */; };
 		FA0E8CF526D02DC70034BB09 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF426D02DC70034BB09 /* HomeViewModel.swift */; };
+		FA0E8CF826D1166B0034BB09 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CF726D1166B0034BB09 /* CoinDataService.swift */; };
+		FA0E8CFB26D153EB0034BB09 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8CFA26D153EB0034BB09 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FA0E8CF026CECF770034BB09 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		FA0E8CF226CED7110034BB09 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		FA0E8CF426D02DC70034BB09 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA0E8CF726D1166B0034BB09 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		FA0E8CFA26D153EB0034BB09 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +74,13 @@
 		FA0E8CC826CC2EA20034BB09 /* StonksPump */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E8CF926D153A00034BB09 /* Utilities */,
+				FA0E8CDA26CC35EE0034BB09 /* Extensions */,
+				FA0E8CF626D115330034BB09 /* Services */,
+				FA0E8CEB26CD96EC0034BB09 /* Models */,
 				FA0E8CDD26CC3B060034BB09 /* Core */,
 				FA0E8CC926CC2EA20034BB09 /* StonksPumpApp.swift */,
 				FA0E8CCB26CC2EA20034BB09 /* ContentView.swift */,
-				FA0E8CDA26CC35EE0034BB09 /* Extensions */,
 				FA0E8CD826CC305B0034BB09 /* Assets.xcassets */,
 				FA0E8CD226CC2EA40034BB09 /* Info.plist */,
 				FA0E8CCF26CC2EA40034BB09 /* Preview Content */,
@@ -102,7 +109,6 @@
 		FA0E8CDD26CC3B060034BB09 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FA0E8CEB26CD96EC0034BB09 /* Models */,
 				FA0E8CE526CD8B150034BB09 /* Components */,
 				FA0E8CDE26CC3B220034BB09 /* Home */,
 			);
@@ -158,6 +164,22 @@
 				FA0E8CEC26CD97280034BB09 /* CoinModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA0E8CF626D115330034BB09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E8CF726D1166B0034BB09 /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA0E8CF926D153A00034BB09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E8CFA26D153EB0034BB09 /* NetworkingManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0E8CF826D1166B0034BB09 /* CoinDataService.swift in Sources */,
 				FA0E8CEF26CECF120034BB09 /* CoinRowView.swift in Sources */,
 				FA0E8CF526D02DC70034BB09 /* HomeViewModel.swift in Sources */,
 				FA0E8CCC26CC2EA20034BB09 /* ContentView.swift in Sources */,
@@ -236,6 +259,7 @@
 				FA0E8CCA26CC2EA20034BB09 /* StonksPumpApp.swift in Sources */,
 				FA0E8CE826CD8B480034BB09 /* CircleButtonView.swift in Sources */,
 				FA0E8CDC26CC36150034BB09 /* Color.swift in Sources */,
+				FA0E8CFB26D153EB0034BB09 /* NetworkingManager.swift in Sources */,
 				FA0E8CEA26CD92B80034BB09 /* CircleButtonAnimationView.swift in Sources */,
 				FA0E8CF126CECF770034BB09 /* PreviewProvider.swift in Sources */,
 				FA0E8CF326CED7110034BB09 /* Double.swift in Sources */,

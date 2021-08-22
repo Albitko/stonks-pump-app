@@ -12,7 +12,9 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio = false
     
+    
     var body: some View {
+        
         ZStack{
             // Background layer
             Color.theme.background
@@ -21,6 +23,8 @@ struct HomeView: View {
             // Content layer
             VStack(spacing: 0.0){
                 homeHeader
+                
+                SearchBarView(searchText: $vm.searchText)
                 
                 columnTitles
                 

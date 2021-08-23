@@ -31,6 +31,7 @@
 		FA0E8D0A26D419B80034BB09 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0926D419B80034BB09 /* StatisticModel.swift */; };
 		FA0E8D0C26D41B470034BB09 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0B26D41B470034BB09 /* StatisticView.swift */; };
 		FA0E8D0E26D420420034BB09 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0D26D420420034BB09 /* HomeStatsView.swift */; };
+		FA0E8D1026D43A140034BB09 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0F26D43A140034BB09 /* MarketDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FA0E8D0926D419B80034BB09 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		FA0E8D0B26D41B470034BB09 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		FA0E8D0D26D420420034BB09 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		FA0E8D0F26D43A140034BB09 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				FA0E8CEC26CD97280034BB09 /* CoinModel.swift */,
 				FA0E8D0926D419B80034BB09 /* StatisticModel.swift */,
+				FA0E8D0F26D43A140034BB09 /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				FA0E8CF526D02DC70034BB09 /* HomeViewModel.swift in Sources */,
 				FA0E8CCC26CC2EA20034BB09 /* ContentView.swift in Sources */,
 				FA0E8D0426D2594F0034BB09 /* LocalFileManager.swift in Sources */,
+				FA0E8D1026D43A140034BB09 /* MarketDataModel.swift in Sources */,
 				FA0E8CE426CC3B840034BB09 /* HomeView.swift in Sources */,
 				FA0E8D0C26D41B470034BB09 /* StatisticView.swift in Sources */,
 				FA0E8CFE26D18B370034BB09 /* CoinImageView.swift in Sources */,

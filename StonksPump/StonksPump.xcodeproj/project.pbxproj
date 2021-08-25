@@ -32,6 +32,7 @@
 		FA0E8D0C26D41B470034BB09 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0B26D41B470034BB09 /* StatisticView.swift */; };
 		FA0E8D0E26D420420034BB09 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0D26D420420034BB09 /* HomeStatsView.swift */; };
 		FA0E8D1026D43A140034BB09 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D0F26D43A140034BB09 /* MarketDataModel.swift */; };
+		FA0E8D1226D67C390034BB09 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E8D1126D67C390034BB09 /* MarketDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		FA0E8D0B26D41B470034BB09 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		FA0E8D0D26D420420034BB09 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 		FA0E8D0F26D43A140034BB09 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		FA0E8D1126D67C390034BB09 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				FA0E8CF726D1166B0034BB09 /* CoinDataService.swift */,
 				FA0E8CFF26D18D2F0034BB09 /* CoinImageService.swift */,
+				FA0E8D1126D67C390034BB09 /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				FA0E8D0626D27BC40034BB09 /* SearchBarView.swift in Sources */,
 				FA0E8CFB26D153EB0034BB09 /* NetworkingManager.swift in Sources */,
 				FA0E8D0E26D420420034BB09 /* HomeStatsView.swift in Sources */,
+				FA0E8D1226D67C390034BB09 /* MarketDataService.swift in Sources */,
 				FA0E8CEA26CD92B80034BB09 /* CircleButtonAnimationView.swift in Sources */,
 				FA0E8D0226D197230034BB09 /* CoinImageViewModel.swift in Sources */,
 				FA0E8CF126CECF770034BB09 /* PreviewProvider.swift in Sources */,

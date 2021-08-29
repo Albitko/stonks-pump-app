@@ -12,11 +12,19 @@ struct PortfolioView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin: CoinModel? = nil
     @State private var quantityText = ""
+    @State private var showCheckmark = false
         
     var body: some View {
         NavigationView{
             ScrollView {
-                portfolioInputSection
+                VStack(alignment: .leading, spacing: 0) {
+                    SearchBarView(searchText: $vm.searchText)
+                    coinLogoList
+                    
+                    if selectedCoin != nil {
+                        portfolioInputSection
+                    }
+                }
             }
             .navigationTitle("Edit portfolio")
             .toolbar(content: {
@@ -25,6 +33,9 @@ struct PortfolioView: View {
                     XMarkButton()
                 }
                 
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    trailingNavBarItems
+                }
             })
         }
     }
@@ -69,36 +80,71 @@ extension PortfolioView {
     }
     
     private var portfolioInputSection: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            SearchBarView(searchText: $vm.searchText)
-            coinLogoList
-            
-            if selectedCoin != nil {
-                VStack(spacing: 20){
-                    HStack {
-                        Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
-                        Spacer()
-                        Text(selectedCoin?.currentPrice.asCurencyWith2Decimials() ?? "")
-                    }
-                    Divider()
-                    HStack {
-                        Text("Amount in your portfolio:")
-                        Spacer()
-                        TextField("Ex. 1.4", text: $quantityText)
-                            .multilineTextAlignment(.trailing)
-                            .keyboardType(.decimalPad)
-                    }
-                    Divider()
-                    HStack {
-                        Text("Current value:")
-                        Spacer()
-                        Text(getCurrentValue().asCurencyWith2Decimials())
-                    }
-                }
-                .animation(.none)
-                .padding()
-                .font(.headline)
+        VStack(spacing: 20){
+            HStack {
+                Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
+                Spacer()
+                Text(selectedCoin?.currentPrice.asCurencyWith2Decimials() ?? "")
+            }
+            Divider()
+            HStack {
+                Text("Amount holding:")
+                Spacer()
+                TextField("Ex. 1.4", text: $quantityText)
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.decimalPad)
+            }
+            Divider()
+            HStack {
+                Text("Current value:")
+                Spacer()
+                Text(getCurrentValue().asCurencyWith2Decimials())
             }
         }
+        .animation(.none)
+        .padding()
+        .font(.headline)
+    }
+    
+    private var trailingNavBarItems: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checkmark")
+                .opacity(showCheckmark ? 1.0 : 0.0)
+            Button(action: {
+                saveButtonPressed()
+            }, label: {
+                Text("Save")
+            })
+            .opacity(
+                (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1.0 : 0.0
+            )
+        }
+        .font(.headline)
+    }
+    
+    private func saveButtonPressed() {
+        guard let coin = selectedCoin else { return }
+        
+        // Save to portfolio
+        
+        // Show checkmark
+        withAnimation(.easeIn) {
+            showCheckmark = true
+            removeSelectedCoin()
+        }
+        
+        UIApplication.shared.endEdition()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            withAnimation(.easeOut) {
+                showCheckmark = false
+            }
+        }
+        
+    }
+    
+    private func removeSelectedCoin() {
+        selectedCoin = nil
+        vm.searchText = ""
     }
 }
